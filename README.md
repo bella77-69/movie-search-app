@@ -1,51 +1,55 @@
-# React + TypeScript + Vite
+# Movie Search App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React + Vite application that allows users to search for movies using the [TMDb API](https://www.themoviedb.org/documentation/api).
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Search for movies by title.
+- Display popular movies on initial page load.
+- View movie details like poster, title, and overview.
+- Styled using plain CSS for a clean and responsive UI.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: For building the user interface.
+- **Vite**: For fast development and optimized builds.
+- **TypeScript**: For type safety and better developer experience.
+- **Axios**: For making API requests.
+- **TMDb API**: For fetching movie data.
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. Clone the repository:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+    ```bash
+    git clone https://github.com/bella77-69/movie-search-app.git
+    ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+2. Navigate to the project directory:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# movie-search-app
+    ```bash
+    cd movie-search-app
+    ```
+
+3. Install the dependencies:
+
+    ```bash
+    npm install
+    ```
+
+4. Set up the environment variables:
+
+    Create a `.env` file in the root directory and add your TMDb API key:
+
+    ```
+    VITE_TMDB_API_KEY=your_api_key_here
+    ```
+
+    You can obtain an API key by creating an account on [TMDb](https://www.themoviedb.org/) and generating a key from your account settings.
+
+## Running the App
+
+To start the development server:
+
+```bash
+npm run dev
